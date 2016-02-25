@@ -2,6 +2,16 @@
 
 Version: 1.1 (Added CryptoWall v4 detection and decryption mechanisms)
 
+The python script was aimed to analyse .pcap network traffic dump files, detect CryptoWall (kind of malware that is encrypting files on victim's disk and exorting a ransom for them) specific communication, deobfuscate it and create a raport containing information (such as server host, IP, obfuscated and deobfuscated messages, ...) about the communication.
+
+The script needs dpkt, pcapReassembler python packages to run:
+https://pypi.python.org/pypi/dpkt
+https://github.com/FredrikAppelros/pcap-reassembler
+
+### documentation
+
+This script can detect 2 curently occurring versions of the malware: version 3 and version 4.
+
 cryptoSniff script can be used in two ways:
 	- by executing it as standalone script with params (see `./cryptoSniff.py -h` for details)
 	- by importnig it into another python script and executing function `analysePcapFile(fileName)`
