@@ -3,10 +3,10 @@
 Version: 1.1 (Added CryptoWall v4 detection and decryption mechanisms)
 
 cryptoSniff script can be used in two ways:
-	- by executing it as standalone script with params (see ./cryptoSniff.py -h for details)
-	- by importnig it into another python script and executing function analysePcapFile(fileName)
+	- by executing it as standalone script with params (see `./cryptoSniff.py -h` for details)
+	- by importnig it into another python script and executing function `analysePcapFile(fileName)`
 
-analysePcapFile(fileName) will return dictionary containing 2 objects:
+`analysePcapFile(fileName)` will return dictionary containing 2 objects:
 
 	result = analysePcapFile("~/example.pcap")
 
@@ -30,7 +30,7 @@ Each item in `servers` dictionary has such structure:
 			print 'Server Status:', serv['status'] # can be: clean / requested / infected
 			print 'Server last used rc4 key:', serv['lastrc4key']
 
-Each item in `cryptocomm' list has such structure:
+Each item in `cryptocomm` list has such structure:
 	
 	line = {}
 	line['direction'] = 	'incoming' / 'outgoing'
